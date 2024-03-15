@@ -27,7 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 30px;
-  background-color: #e2e1dc;
+  /* background-color: #cad2c5; */
 }
 .container {
   position: relative;
@@ -37,9 +37,7 @@ body {
   padding: 5px;
   color: #fff;
   display: flex;
-
-  border-radius: 10px;
-  background-color: yellow;
+  border-radius: 10px black solid;
 }
 .left {
   width: 60%;
@@ -53,9 +51,9 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  color: blue;
+  color: black;
   border-radius: 5px;
-  background-color: #E8BEAC;
+  background-color: #ede0d4;
 }
 /* set after behind the main element */
 .calendar::before,
@@ -67,13 +65,14 @@ body {
   width: 12px;
   height: 97%;
   border-radius: 0 5px 5px 0;
-  background-color: #7f8247;
+  background-color: #e6ccb2;
   transform: translateY(-50%);
 }
 .calendar::before {
   height: 94%;
   left: calc(100% + 12px);
-  background-color: orange;
+  background-color: #ddb892;
+  /* box-shadow: #ddb892; */
 }
 .calendar .month {
   width: 100%;
@@ -133,10 +132,10 @@ body {
   border: 1px solid black;
 }
 .calendar .days .day:nth-child(7n + 1) {
-  border-left: 2px solid yellowgreen;
+  border-left: 2px solid black;
 }
 .calendar .days .day:nth-child(7n) {
-  border-right: 2px solid violet;
+  border-right: 2px solid black;
 }
 .calendar .days .day:nth-child(-n + 7) {
   border-top: 2px solid black;
@@ -146,7 +145,7 @@ body {
 }
 
 .calendar .days .day:not(.prev-date, .next-date):hover {
-  color: whitesmoke;
+  color: white;
   background-color: var(--primary-clr);
 }
 .calendar .days .prev-date,
@@ -186,10 +185,10 @@ body {
   background-color: var(--primary-clr);
 }
 .calendar .days .day:hover.event::after {
-  background-color: #fff;
+  background-color: red
 }
 .calendar .days .active.event::after {
-  background-color: #fff;
+  background-color: #cad2c5;
   bottom: 20%;
 }
 .calendar .days .active.event {
@@ -232,7 +231,7 @@ body {
   color: var(--primary-clr);
 }
 .calendar .goto-today button:hover {
-  color: #fff;
+  color: blue;
   background-color: var(--primary-clr);
 }
 .calendar .goto-today .goto button {
@@ -264,11 +263,12 @@ body {
 .right .today-date .event-day {
   font-size: 2rem;
   font-weight: 500;
+  color: black;
 }
 .right .today-date .event-date {
   font-size: 1rem;
   font-weight: 400;
-  color: #878895;
+  color: black;
 }
 .events {
   width: 100%;
@@ -290,8 +290,7 @@ body {
   gap: 5px;
   padding: 0 20px;
   padding-left: 50px;
-  color: #fff;
-  background: linear-gradient(90deg, #3f4458, transparent);
+  color: black;
   cursor: pointer;
 }
 /* even event */
@@ -299,7 +298,7 @@ body {
   background: transparent;
 }
 .events .event:hover {
-  background: linear-gradient(90deg, var(--primary-clr), transparent);
+  background: linear-gradient(90deg, rgb(19, 19, 217), transparent);
 }
 .events .event .title {
   display: flex;
@@ -321,7 +320,7 @@ body {
 .events .event .event-time {
   font-size: 0.8rem;
   font-weight: 400;
-  color: blue;
+  color: skyblue;
   margin-left: 15px;
   pointer-events: none;
 }
@@ -330,7 +329,7 @@ body {
 }
 /* add tick in event after */
 .events .event::after {
-  content: "✓";
+  content: "Delete";
   position: absolute;
   top: 50%;
   right: 0;
